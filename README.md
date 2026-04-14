@@ -16,20 +16,12 @@ This template extends the nitro `azure-swa` preset since it is outdated and fail
 ### Install dependencies
 
 ```bash
-# pnpm
-pnpm install
-
-# npm
 npm install
 ```
 
 ### Run locally (dev)
 
 ```bash
-# pnpm
-pnpm dev
-
-# npm
 npm run dev
 ```
 
@@ -38,10 +30,6 @@ npm run dev
 ### Standard production build
 
 ```bash
-# pnpm
-pnpm build
-
-# npm
 npm run build
 ```
 
@@ -50,10 +38,6 @@ npm run build
 Use this build for Azure SWA-targeted output.
 
 ```bash
-# pnpm
-pnpm build:azure
-
-# npm
 npm run build:azure
 ```
 
@@ -62,10 +46,6 @@ npm run build:azure
 ### Standard preview
 
 ```bash
-# pnpm
-pnpm preview
-
-# npm
 npm run preview
 ```
 
@@ -74,22 +54,9 @@ npm run preview
 This uses the Static Web Apps CLI with the generated server output.
 
 ```bash
-# pnpm
-pnpm preview:azure
-
-# npm
 npm run preview:azure
 ```
 
-## Testing
-
-```bash
-# pnpm
-pnpm test
-
-# npm
-npm run test
-```
 
 ## Deploy from Azure Portal
 1. Create a new [Static Web App](https://portal.azure.com/#create/Microsoft.StaticApp) in the Azure Portal.
