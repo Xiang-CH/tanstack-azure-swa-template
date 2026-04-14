@@ -91,13 +91,18 @@ pnpm test
 npm run test
 ```
 
-## Deploying To Azure Static Web Apps
-
-1. Run the Azure-targeted build command.
-2. Ensure the output folders are available:
-   - static files: `.output/public`
-   - server/API: `.output/server`
-3. Use your Azure Static Web Apps deployment flow (GitHub Actions or Azure CLI/portal) and point it at this repository.
+## Deploy from Azure Portal
+1. Create a new [Static Web App](https://portal.azure.com/#create/Microsoft.StaticApp) in the Azure Portal.
+2. Fill in the required details (subscription, resource group, name, region).
+   - Connect to GitHub and select your repository and branch.
+   - Set the build configuration:
+     - `App location`: `/`
+     - `API location`: `.output/server`
+     - `Output location`: `.output/public`
+   * Note: If the `App location` is not `/`, ensure that `API location` is relative to the root and that the `Output location` is relative to the `App location`.
+3. Click Create and a GitHub Actions workflow will be set up to build and deploy your app on push to the selected branch.
+   - The workflow should look something like [this](.github/workflows/azure-static-web-apps-icy-sand-00c0a2c10.yml).
+ 
 
 ## Useful Files
 
