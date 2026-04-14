@@ -57,6 +57,39 @@ This uses the Static Web Apps CLI with the generated server output.
 npm run preview:azure
 ```
 
+## Migrate Existing TanStack Start App
+1. Install `nitro` if you haven't already:
+   ```bashbash
+   npm install nitro
+   ```
+2. Copy the `./nitro` directory from this template into your existing TanStack Start app.
+3. Update your `vite.config.ts` to include the Azure build preset:
+   ```ts
+   const config = defineConfig({
+      plugins: [
+         nitro(
+            process.env.DEPLOY_TARGET === 'azure'
+            ? {
+                  preset: './nitro/presets/azure-swa-custom.mjs', //original template: 'azure-swa'
+                  azure: {
+                     config: {
+                        routes: [
+                           {
+                              route: '/_serverFn/*',
+                              rewrite: '/api/server',
+                           },
+                        ],
+                     },
+                  },
+               }
+            : undefined,
+         ), 
+         // other plugins
+      ],
+   });
+   ```
+
+
 
 ## Deploy from Azure Portal
 1. Create a new [Static Web App](https://portal.azure.com/#create/Microsoft.StaticApp) in the Azure Portal.
