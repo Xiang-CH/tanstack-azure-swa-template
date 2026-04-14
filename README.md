@@ -99,6 +99,7 @@ npm run test
      - `App location`: `/`
      - `API location`: `.output/server`
      - `Output location`: `.output/public`
+     <img width="729" height="1110" alt="Screenshot 2026-04-14 at 7 28 46 PM" src="https://github.com/user-attachments/assets/e7741840-cda3-456f-b324-106eb1c0c28a" />
    * Note: If the `App location` is not `/`, ensure that `API location` is relative to the root and that the `Output location` is relative to the `App location`.
 3. Click Create and a GitHub Actions workflow will be set up to build and deploy your app on push to the selected branch.
    - The workflow should look something like [this](.github/workflows/azure-static-web-apps-icy-sand-00c0a2c10.yml).
