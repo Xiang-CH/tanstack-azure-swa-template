@@ -13,49 +13,49 @@ This template extends the nitro `azure-swa` preset since it is outdated and fail
 
 ## Quick Start
 
-### Install dependencies
+- Install dependencies
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-### Run locally (dev)
+- Run locally (dev)
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 ## Build Commands
 
-### Standard production build
+- Standard production build
 
-```bash
-npm run build
-```
+   ```bash
+   npm run build
+   ```
 
-### Azure Static Web Apps build
+- **Azure Static Web Apps build**
 
-Use this build for Azure SWA-targeted output.
+   Use this build for Azure SWA-targeted output.
 
-```bash
-npm run build:azure
-```
+   ```bash
+   npm run build:azure
+   ```
 
 ## Preview Commands
 
-### Standard preview
+- Standard preview
 
-```bash
-npm run preview
-```
+   ```bash
+   npm run preview
+   ```
 
-### Azure SWA local preview
+- **Azure SWA local preview**
 
-This uses the Static Web Apps CLI with the generated server output.
+   This uses the Static Web Apps CLI with the generated server output.
 
-```bash
-npm run preview:azure
-```
+   ```bash
+   npm run preview:azure
+   ```
 
 ## Migrate Existing TanStack Start App
 1. Install `nitro` if you haven't already:
@@ -100,10 +100,10 @@ npm run preview:azure
      - `API location`: `.output/server`
      - `Output location`: `.output/public`
      <img width="729" height="1110" alt="Screenshot 2026-04-14 at 7 28 46 PM" src="https://github.com/user-attachments/assets/e7741840-cda3-456f-b324-106eb1c0c28a" />
-   * Note: If the `App location` is not `/`, ensure that `API location` is relative to the root and that the `Output location` is relative to the `App location`.
 3. Click Create and a GitHub Actions workflow will be set up to build and deploy your app on push to the selected branch.
    - The workflow should look something like [this](.github/workflows/azure-static-web-apps-icy-sand-00c0a2c10.yml).
  
+* **Note**: If the `App location` is not `/`, ensure that `API location` is relative to the root and that the `Output location` is relative to the `App location`.
 
 ## Useful Files
 
